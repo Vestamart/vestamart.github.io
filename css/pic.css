@@ -18,42 +18,59 @@
 
 .wall-picture {
   position: absolute;
-  top: 18px;
-  left: 53px;
-  width: 94px;
-  height: 100px;
-  border: 6px solid #ffffff;
-  outline: 2px solid #d7c9a7;
-  background: linear-gradient(#5b85e5, #b9d8ff 65%, #b66c2e 66%);
+  z-index: 2;
+  top: 27px;
+  left: 47px;
+  width: 106px;
+  height: 105px;
+  border: 5px solid #ffffff;
+  background: linear-gradient(135deg, #4779e8, #dce8ff 67%, #cf712e 68%);
 }
 
-.wall-picture::before,
-.wall-picture::after {
+.frame-loops {
   position: absolute;
-  top: -15px;
+  z-index: 1;
+}
+
+.frame-loops-top,
+.frame-loops-bottom {
+  left: 44px;
+  width: 112px;
+  height: 20px;
+  background: radial-gradient(ellipse, transparent 7px, #ffffff 8px 11px, transparent 12px) 0 0 / 22px 20px repeat-x;
+}
+
+.frame-loops-top {
+  top: 15px;
+}
+
+.frame-loops-bottom {
+  top: 120px;
+}
+
+.frame-loops-left,
+.frame-loops-right {
+  top: 24px;
   width: 20px;
-  height: 16px;
-  content: "";
-  border: 4px solid #ffffff;
-  border-bottom: 0;
-  border-radius: 14px 14px 0 0;
+  height: 112px;
+  background: radial-gradient(ellipse, transparent 7px, #ffffff 8px 11px, transparent 12px) 0 0 / 20px 22px repeat-y;
 }
 
-.wall-picture::before {
-  left: 9px;
-  box-shadow: 18px 0 0 -4px #afbe8f, 18px 0 0 0 #ffffff;
+.frame-loops-left {
+  left: 36px;
 }
 
-.wall-picture::after {
-  right: 9px;
+.frame-loops-right {
+  right: 36px;
 }
 
 .sun {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  width: 37px;
-  height: 37px;
+  z-index: 3;
+  top: -8px;
+  right: -8px;
+  width: 38px;
+  height: 38px;
   border: 3px solid #f4d91e;
   border-radius: 50%;
   background: #fff36a;
@@ -61,20 +78,21 @@
 
 .teapot {
   position: absolute;
-  right: 19px;
-  bottom: 8px;
-  width: 45px;
-  height: 42px;
+  z-index: 2;
+  right: 17px;
+  bottom: 5px;
+  width: 58px;
+  height: 51px;
   border-radius: 50% 50% 45% 45%;
   background: radial-gradient(circle at 35% 30%, #fff0f3, #e74463 65%);
 }
 
 .teapot-lid {
   position: absolute;
-  top: -10px;
-  left: 12px;
-  width: 23px;
-  height: 12px;
+  top: -13px;
+  left: 15px;
+  width: 30px;
+  height: 16px;
   border-radius: 50% 50% 20% 20%;
   background: #e74463;
 }
@@ -82,9 +100,9 @@
 .teapot-lid::before {
   position: absolute;
   top: -5px;
-  left: 8px;
-  width: 7px;
-  height: 7px;
+  left: 11px;
+  width: 8px;
+  height: 8px;
   content: "";
   border-radius: 50%;
   background: #c91f45;
@@ -92,10 +110,10 @@
 
 .teapot-spout {
   position: absolute;
-  top: 17px;
-  left: -21px;
-  width: 27px;
-  height: 9px;
+  top: 20px;
+  left: -28px;
+  width: 35px;
+  height: 11px;
   transform: rotate(25deg);
   background: #df3157;
 }
@@ -103,18 +121,18 @@
 .teapot-spout::before {
   position: absolute;
   left: -5px;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 11px;
   content: "";
   background: #df3157;
 }
 
 .teapot-handle {
   position: absolute;
-  top: 9px;
-  right: -17px;
-  width: 24px;
-  height: 26px;
+  top: 13px;
+  right: -20px;
+  width: 29px;
+  height: 30px;
   border: 4px solid #df3157;
   border-left: 0;
   border-radius: 0 50% 50% 0;
@@ -122,53 +140,55 @@
 
 .table {
   position: absolute;
+  z-index: 3;
   bottom: 0;
-  left: 73px;
-  width: 54px;
-  height: 82px;
+  left: 55px;
+  width: 90px;
+  height: 72px;
 }
 
 .table-top {
   position: absolute;
   top: 0;
-  left: -13px;
-  width: 80px;
-  height: 9px;
+  left: 0;
+  width: 90px;
+  height: 10px;
   background: #ce7133;
 }
 
 .table-leg {
   position: absolute;
-  top: 8px;
-  left: 23px;
-  width: 12px;
-  height: 58px;
+  top: 9px;
+  left: 40px;
+  width: 14px;
+  height: 49px;
   background: #ce7133;
 }
 
 .table-base {
   position: absolute;
   bottom: 0;
-  left: 7px;
-  width: 45px;
-  height: 16px;
+  left: 19px;
+  width: 57px;
+  height: 15px;
   background: #ce7133;
   clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
 }
 
 .chair {
   position: absolute;
-  bottom: 0;
-  width: 42px;
-  height: 78px;
+  z-index: 2;
+  bottom: 3px;
+  width: 48px;
+  height: 88px;
 }
 
 .chair-left {
-  left: 5px;
+  left: 6px;
 }
 
 .chair-right {
-  right: 5px;
+  right: 6px;
   transform: scaleX(-1);
 }
 
@@ -176,18 +196,18 @@
   position: absolute;
   top: 0;
   left: 2px;
-  width: 18px;
-  height: 58px;
-  border-left: 7px solid #cf6e31;
+  width: 22px;
+  height: 86px;
+  border-left: 8px solid #cf6e31;
   border-radius: 50% 0 0 50%;
 }
 
 .chair-seat {
   position: absolute;
-  top: 46px;
+  top: 48px;
   left: 12px;
-  width: 30px;
-  height: 8px;
+  width: 36px;
+  height: 9px;
   background: #cf6e31;
 }
 
@@ -212,10 +232,9 @@
 
 .chair-leg {
   position: absolute;
-  top: 54px;
-  left: 17px;
-  width: 6px;
-  height: 24px;
+  top: 57px;
+  left: 38px;
+  width: 7px;
+  height: 31px;
   background: #cf6e31;
-  box-shadow: 19px 0 #cf6e31;
 }
