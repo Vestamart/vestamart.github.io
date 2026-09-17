@@ -23,13 +23,14 @@
   left: 47px;
   width: 106px;
   height: 105px;
+  overflow: hidden;
   border: 5px solid #ffffff;
-  background: linear-gradient(135deg, #4779e8, #dce8ff 67%, #cf712e 68%);
+  background: linear-gradient(135deg, #3f72e8 8%, #dce8ff 67%, #cf712e 68%);
 }
 
 .frame-loops {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
 }
 
 .frame-loops-top,
@@ -45,32 +46,46 @@
 }
 
 .frame-loops-bottom {
-  top: 120px;
+  top: 119px;
 }
 
 .frame-loops-left,
 .frame-loops-right {
-  top: 24px;
-  width: 20px;
-  height: 112px;
-  background: radial-gradient(ellipse, transparent 7px, #ffffff 8px 11px, transparent 12px) 0 0 / 20px 22px repeat-y;
+  top: 25px;
+  box-sizing: border-box;
+  width: 19px;
+  height: 19px;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow:
+    0 20px 0 -4px #afbe8f,
+    0 20px 0 0 #ffffff,
+    0 40px 0 -4px #afbe8f,
+    0 40px 0 0 #ffffff,
+    0 60px 0 -4px #afbe8f,
+    0 60px 0 0 #ffffff,
+    0 80px 0 -4px #afbe8f,
+    0 80px 0 0 #ffffff,
+    0 100px 0 -4px #afbe8f,
+    0 100px 0 0 #ffffff;
 }
 
 .frame-loops-left {
-  left: 36px;
+  left: 35px;
 }
 
 .frame-loops-right {
-  right: 36px;
+  right: 35px;
 }
 
 .sun {
   position: absolute;
-  z-index: 3;
-  top: -8px;
-  right: -8px;
-  width: 38px;
-  height: 38px;
+  z-index: 4;
+  top: -16px;
+  right: -16px;
+  width: 49px;
+  height: 49px;
   border: 3px solid #f4d91e;
   border-radius: 50%;
   background: #fff36a;
@@ -78,11 +93,11 @@
 
 .teapot {
   position: absolute;
-  z-index: 2;
-  right: 17px;
-  bottom: 5px;
-  width: 58px;
-  height: 51px;
+  z-index: 4;
+  right: 15px;
+  bottom: 4px;
+  width: 61px;
+  height: 53px;
   border-radius: 50% 50% 45% 45%;
   background: radial-gradient(circle at 35% 30%, #fff0f3, #e74463 65%);
 }
@@ -90,8 +105,8 @@
 .teapot-lid {
   position: absolute;
   top: -13px;
-  left: 15px;
-  width: 30px;
+  left: 16px;
+  width: 31px;
   height: 16px;
   border-radius: 50% 50% 20% 20%;
   background: #e74463;
@@ -110,9 +125,9 @@
 
 .teapot-spout {
   position: absolute;
-  top: 20px;
-  left: -28px;
-  width: 35px;
+  top: 22px;
+  left: -30px;
+  width: 38px;
   height: 11px;
   transform: rotate(25deg);
   background: #df3157;
@@ -129,8 +144,8 @@
 
 .teapot-handle {
   position: absolute;
-  top: 13px;
-  right: -20px;
+  top: 14px;
+  right: -19px;
   width: 29px;
   height: 30px;
   border: 4px solid #df3157;
@@ -223,11 +238,12 @@
 }
 
 .chair-seat::before {
-  left: 5px;
+  left: 6px;
+  box-shadow: 11px 0 #7d3a1e, 22px 0 #7d3a1e;
 }
 
 .chair-seat::after {
-  right: 5px;
+  display: none;
 }
 
 .chair-leg {
