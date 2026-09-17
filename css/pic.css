@@ -1,0 +1,240 @@
+.task-content {
+  width: 240px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.picture {
+  box-sizing: border-box;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 5px solid #eeeeee;
+  background: #afbe8f;
+  box-shadow: 0 1px 4px #777777;
+}
+
+.wall-picture {
+  position: absolute;
+  z-index: 2;
+  top: 27px;
+  left: 47px;
+  width: 106px;
+  height: 105px;
+  border: 5px solid #ffffff;
+  background: linear-gradient(135deg, #4779e8, #dce8ff 67%, #cf712e 68%);
+}
+
+.frame-loops {
+  position: absolute;
+  z-index: 1;
+}
+
+.frame-loops-top,
+.frame-loops-bottom {
+  left: 44px;
+  width: 112px;
+  height: 20px;
+  background: radial-gradient(ellipse, transparent 7px, #ffffff 8px 11px, transparent 12px) 0 0 / 22px 20px repeat-x;
+}
+
+.frame-loops-top {
+  top: 15px;
+}
+
+.frame-loops-bottom {
+  top: 120px;
+}
+
+.frame-loops-left,
+.frame-loops-right {
+  top: 24px;
+  width: 20px;
+  height: 112px;
+  background: radial-gradient(ellipse, transparent 7px, #ffffff 8px 11px, transparent 12px) 0 0 / 20px 22px repeat-y;
+}
+
+.frame-loops-left {
+  left: 36px;
+}
+
+.frame-loops-right {
+  right: 36px;
+}
+
+.sun {
+  position: absolute;
+  z-index: 3;
+  top: -8px;
+  right: -8px;
+  width: 38px;
+  height: 38px;
+  border: 3px solid #f4d91e;
+  border-radius: 50%;
+  background: #fff36a;
+}
+
+.teapot {
+  position: absolute;
+  z-index: 2;
+  right: 17px;
+  bottom: 5px;
+  width: 58px;
+  height: 51px;
+  border-radius: 50% 50% 45% 45%;
+  background: radial-gradient(circle at 35% 30%, #fff0f3, #e74463 65%);
+}
+
+.teapot-lid {
+  position: absolute;
+  top: -13px;
+  left: 15px;
+  width: 30px;
+  height: 16px;
+  border-radius: 50% 50% 20% 20%;
+  background: #e74463;
+}
+
+.teapot-lid::before {
+  position: absolute;
+  top: -5px;
+  left: 11px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  border-radius: 50%;
+  background: #c91f45;
+}
+
+.teapot-spout {
+  position: absolute;
+  top: 20px;
+  left: -28px;
+  width: 35px;
+  height: 11px;
+  transform: rotate(25deg);
+  background: #df3157;
+}
+
+.teapot-spout::before {
+  position: absolute;
+  left: -5px;
+  width: 10px;
+  height: 11px;
+  content: "";
+  background: #df3157;
+}
+
+.teapot-handle {
+  position: absolute;
+  top: 13px;
+  right: -20px;
+  width: 29px;
+  height: 30px;
+  border: 4px solid #df3157;
+  border-left: 0;
+  border-radius: 0 50% 50% 0;
+}
+
+.table {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 55px;
+  width: 90px;
+  height: 72px;
+}
+
+.table-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 10px;
+  background: #ce7133;
+}
+
+.table-leg {
+  position: absolute;
+  top: 9px;
+  left: 40px;
+  width: 14px;
+  height: 49px;
+  background: #ce7133;
+}
+
+.table-base {
+  position: absolute;
+  bottom: 0;
+  left: 19px;
+  width: 57px;
+  height: 15px;
+  background: #ce7133;
+  clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+}
+
+.chair {
+  position: absolute;
+  z-index: 2;
+  bottom: 3px;
+  width: 48px;
+  height: 88px;
+}
+
+.chair-left {
+  left: 6px;
+}
+
+.chair-right {
+  right: 6px;
+  transform: scaleX(-1);
+}
+
+.chair-back {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  width: 22px;
+  height: 86px;
+  border-left: 8px solid #cf6e31;
+  border-radius: 50% 0 0 50%;
+}
+
+.chair-seat {
+  position: absolute;
+  top: 48px;
+  left: 12px;
+  width: 36px;
+  height: 9px;
+  background: #cf6e31;
+}
+
+.chair-seat::before,
+.chair-seat::after {
+  position: absolute;
+  top: 2px;
+  width: 6px;
+  height: 6px;
+  content: "";
+  border-radius: 50%;
+  background: #7d3a1e;
+}
+
+.chair-seat::before {
+  left: 5px;
+}
+
+.chair-seat::after {
+  right: 5px;
+}
+
+.chair-leg {
+  position: absolute;
+  top: 57px;
+  left: 38px;
+  width: 7px;
+  height: 31px;
+  background: #cf6e31;
+}
