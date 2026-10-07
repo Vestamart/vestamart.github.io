@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мир камня — Задание 3</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/task3.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-logo" href="index.html">Мир камня</a>
+    <nav class="site-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог пород</a></li><li><a href="assignments.html" aria-current="page">Задания</a></li></ul></nav>
+  </header>
+
+  <main>
+    <section class="page-intro"><p class="eyebrow">Задание 3</p><h1>Flexbox-ролик</h1><p>Выполнил Силуянов Никита, вариант 1. Наведите мышь на блок и звезду, затем нажмите на композицию.</p></section>
+
+    <section class="movie-section">
+      <div class="flex-movie" tabindex="0" role="button" aria-pressed="false" aria-label="Интерактивный ролик. Нажмите, чтобы изменить состояние">
+        <p class="movie-caption" aria-live="polite"></p>
+        <div class="movie-stage">
+          <img class="artist artist-one" src="assets/images/task3/man1.png" alt="Художник идёт с палитрой">
+          <img class="artist artist-two" src="assets/images/task3/man2.png" alt="Художник делает шаг">
+          <img class="artist artist-three" src="assets/images/task3/man3.png" alt="Художник держит кисть">
+          <img class="dream-star" src="assets/images/task3/zvezda.png" alt="Звезда">
+          <img class="moving-brush" src="assets/images/task3/brush.png" alt="Кисть">
+        </div>
+      </div>
+      <div class="movie-help"><h2>Управление</h2><ol><li>В обычном состоянии художник стоит в кадре.</li><li>При наведении он идёт, появляется надпись и звезда.</li><li>При наведении на звезду она движется по траектории.</li><li>После нажатия появляется кисть и новая фраза.</li></ol></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>Мир камня</strong><p>Учебный проект Силуянова Никиты</p></div><a href="assignments.html">Вернуться к заданиям</a></footer>
+</body>
+</html>

@@ -5,40 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мир камня — Задания</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <a class="site-logo" href="index.html">Мир камня</a>
-    <nav class="site-nav" aria-label="Основная навигация">
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="catalog.html">Каталог пород</a></li>
-        <li><a href="assignments.html" aria-current="page">Задания</a></li>
-      </ul>
-    </nav>
+    <nav class="site-nav" aria-label="Основная навигация"><ul><li><a href="index.html">Главная</a></li><li><a href="catalog.html">Каталог пород</a></li><li><a href="assignments.html" aria-current="page">Задания</a></li></ul></nav>
   </header>
 
   <main>
-    <h1>Учебные задания</h1>
-
-    <section>
-      <h2>Задание 1</h2>
-      <p>Разработка многостраничного информационного сайта.</p>
-    </section>
-
-    <section>
-      <h2>Задание 2</h2>
-      <p><a href="task2.html">Рисунок средствами CSS — вариант 2</a></p>
-    </section>
-
-    <section>
-      <h2>Курсовая работа</h2>
+    <section class="page-intro"><p class="eyebrow">Практические работы</p><h1>Учебные задания</h1><p>На этой странице собраны выполненные задания по HTML и CSS. Каждая работа открывается на отдельной странице и использует общую структуру сайта.</p></section>
+    <section class="assignment-grid">
+      <article class="assignment-card"><span>01</span><h2>Многостраничный сайт</h2><p>Структура, единое оформление, навигация и тематический каталог горных пород.</p><a href="index.html">Открыть главную</a></article>
+      <article class="assignment-card"><span>02</span><h2>CSS-рисунок</h2><p>Композиция варианта 2 размером 200×200 px, полностью собранная средствами CSS.</p><a href="task2.html">Открыть задание</a></article>
+      <article class="assignment-card"><span>03</span><h2>Flexbox-ролик</h2><p>Интерактивный компонент варианта 1 с состояниями наведения и нажатия.</p><a href="task3.html">Открыть задание</a></article>
+      <article class="assignment-card is-planned"><span>04</span><h2>Курсовая работа</h2><p>Раздел подготовлен для следующего этапа обучения.</p></article>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Учебный проект «Мир камня»</p>
-  </footer>
+  <footer class="site-footer"><div><strong>Мир камня</strong><p>Учебный проект Силуянова Никиты</p></div><a href="index.html">На главную</a></footer>
 </body>
 </html>

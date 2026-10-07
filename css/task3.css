@@ -1,0 +1,185 @@
+.movie-section {
+  display: flex;
+  gap: 52px;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  padding: 40px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+.flex-movie {
+  position: relative;
+  display: flex;
+  flex: 0 0 200px;
+  align-items: flex-end;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border: 3px solid #202020;
+  background: linear-gradient(#ffffff 0, #dffaff 55%, #64d8e1 100%);
+  cursor: pointer;
+  user-select: none;
+}
+
+.flex-movie:focus-visible {
+  outline: 4px solid #c89055;
+  outline-offset: 4px;
+}
+
+.movie-caption {
+  position: absolute;
+  z-index: 5;
+  top: 9px;
+  left: 8px;
+  margin: 0;
+  color: #222222;
+  font-size: 18px;
+}
+
+.movie-caption::before {
+  content: "";
+}
+
+.movie-stage {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.artist {
+  position: absolute;
+  z-index: 2;
+  bottom: 2px;
+  left: 36px;
+  width: 128px;
+  height: 170px;
+  object-fit: contain;
+}
+
+.artist-two,
+.artist-three {
+  opacity: 0;
+}
+
+.dream-star,
+.moving-brush {
+  position: absolute;
+  z-index: 4;
+  display: none;
+}
+
+.dream-star {
+  top: 28px;
+  right: 10px;
+  width: 47px;
+}
+
+.moving-brush {
+  top: 31px;
+  left: 0;
+  width: 45px;
+}
+
+.flex-movie:hover:not(.is-active) .movie-caption::before {
+  content: "Иду за мечтой";
+}
+
+.flex-movie:hover:not(.is-active) .dream-star {
+  display: block;
+}
+
+.flex-movie:hover:not(.is-active) .artist-one {
+  animation: walk-one 0.9s steps(1) infinite;
+}
+
+.flex-movie:hover:not(.is-active) .artist-two {
+  animation: walk-two 0.9s steps(1) infinite;
+}
+
+.flex-movie:hover:not(.is-active) .artist-three {
+  animation: walk-three 0.9s steps(1) infinite;
+}
+
+.dream-star:hover {
+  animation: star-path 1.6s ease-in-out infinite;
+}
+
+.flex-movie.is-active {
+  animation: flex-pulse 1.4s ease-in-out infinite;
+}
+
+.flex-movie.is-active .movie-caption::before {
+  content: "Мечта рядом!";
+}
+
+.flex-movie.is-active .artist-one,
+.flex-movie.is-active .artist-two {
+  opacity: 0;
+}
+
+.flex-movie.is-active .artist-three {
+  opacity: 1;
+}
+
+.flex-movie.is-active .dream-star {
+  display: none;
+}
+
+.flex-movie.is-active .moving-brush {
+  display: block;
+  animation: brush-path 3s linear infinite;
+}
+
+@keyframes walk-one {
+  0%, 32% { opacity: 1; transform: translateX(-9px); }
+  33%, 100% { opacity: 0; }
+}
+
+@keyframes walk-two {
+  0%, 32%, 66%, 100% { opacity: 0; }
+  33%, 65% { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes walk-three {
+  0%, 65% { opacity: 0; }
+  66%, 99% { opacity: 1; transform: translateX(9px); }
+  100% { opacity: 0; }
+}
+
+@keyframes star-path {
+  0%, 100% { transform: translate(0, 0) rotate(0); }
+  25% { transform: translate(-28px, 12px) rotate(120deg); }
+  55% { transform: translate(-12px, 45px) rotate(240deg); }
+  80% { transform: translate(14px, 20px) rotate(320deg); }
+}
+
+@keyframes brush-path {
+  0% { transform: translate(0, 0) rotate(-28deg); }
+  12% { transform: translate(18px, -13px) rotate(-8deg); }
+  25% { transform: translate(38px, 0) rotate(20deg); }
+  38% { transform: translate(59px, -14px) rotate(-12deg); }
+  50% { transform: translate(81px, -1px) rotate(18deg); }
+  63% { transform: translate(103px, -15px) rotate(-10deg); }
+  76% { transform: translate(126px, 0) rotate(18deg); }
+  88% { transform: translate(145px, -13px) rotate(-8deg); }
+  100% { transform: translate(168px, -2px) rotate(16deg); }
+}
+
+@keyframes flex-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+
+@media (max-width: 700px) {
+  .movie-section {
+    flex-direction: column;
+    padding: 28px 18px;
+  }
+}
