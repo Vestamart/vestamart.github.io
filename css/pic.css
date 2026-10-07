@@ -34,25 +34,21 @@
 .frame-loops {
   position: absolute;
   z-index: 1;
+  display: flex;
 }
 
-.frame-loops-top {
-  top: 16px;
-  left: 49px;
+.frame-loop {
   box-sizing: border-box;
   width: 19px;
   height: 19px;
   border: 4px solid #ffffff;
   border-radius: 50%;
-  box-shadow:
-    20px 0 0 -4px #b5c994,
-    20px 0 0 0 #ffffff,
-    40px 0 0 -4px #b5c994,
-    40px 0 0 0 #ffffff,
-    60px 0 0 -4px #b5c994,
-    60px 0 0 0 #ffffff,
-    80px 0 0 -4px #b5c994,
-    80px 0 0 0 #ffffff;
+}
+
+.frame-loops-top {
+  top: 16px;
+  left: 49px;
+  gap: 1px;
 }
 
 .frame-loops-bottom {
@@ -62,21 +58,8 @@
 .frame-loops-left,
 .frame-loops-right {
   top: 27px;
-  box-sizing: border-box;
-  width: 19px;
-  height: 19px;
-  border: 4px solid #ffffff;
-  border-radius: 50%;
-  background: transparent;
-  box-shadow:
-    0 19px 0 -4px #b5c994,
-    0 19px 0 0 #ffffff,
-    0 38px 0 -4px #b5c994,
-    0 38px 0 0 #ffffff,
-    0 57px 0 -4px #b5c994,
-    0 57px 0 0 #ffffff,
-    0 76px 0 -4px #b5c994,
-    0 76px 0 0 #ffffff;
+  flex-direction: column;
+  gap: 1px;
 }
 
 .frame-loops-left {
@@ -235,29 +218,21 @@
   position: absolute;
   top: 46px;
   left: 17px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 4px;
   width: 33px;
   height: 9px;
   background: #df7828;
 }
 
-.chair-seat::before,
-.chair-seat::after {
-  position: absolute;
-  top: 2px;
+.chair-stud {
   width: 5px;
   height: 5px;
-  content: "";
   border-radius: 50%;
   background: #7d3a1e;
-}
-
-.chair-seat::before {
-  left: 4px;
-  box-shadow: 10px 0 #7d3a1e, 20px 0 #7d3a1e;
-}
-
-.chair-seat::after {
-  display: none;
 }
 
 .chair-leg {
